@@ -1,0 +1,83 @@
+package com.example.agendiario;
+
+
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+
+
+
+@Entity(tableName = "hards")
+
+
+
+public class HardSkill {
+
+
+
+    @PrimaryKey(autoGenerate = true)
+    @NonNull
+    @ColumnInfo(name = "hardSkillId")
+    private int mId;
+
+    @Nullable
+    @ColumnInfo(name = "hardSkillName")
+    private String mName;
+
+    private String mProvelt;
+
+    public Museum(@Nullable String name, String provelt, double value, String creationDate) {
+        mName = name;
+        mProvelt = provelt;
+        mValue = value;
+        mCreationDate = creationDate;
+    }
+
+    public int getId() {
+        return mId;
+    }
+
+    public void setId(int id) {
+        mId = id;
+    }
+
+    public String getName() {
+        return mName;
+    }
+
+    public void setName(String name) {
+        mName = name;
+    }
+
+    public String getProvelt() {
+        return mProvelt;
+    }
+
+    public void setProvelt(String provelt) {
+        mProvelt = provelt;
+    }
+
+    public int getValue() {
+        return mValue;
+    }
+
+    public void setValue(double value) {
+        mValue = value;
+    }
+
+    public String getCreationDate() {
+        return mCreationDate;
+    }
+
+    public void setCreationDate(String creationDate) {
+        mCreationDate = creationDate;
+    }
+
+    private double mValue;
+    private String mCreationDate;
+
+}
